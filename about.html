@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
       <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -8,21 +14,25 @@
     </head>
     <body>
       <header>
-        <div>
-            <img src="https://via.placeholder.com/150x50?text=Logo"alt=Tirtzah Schachter>
-            <div>
-              <a href="Home">Tirtzah Schachter</a>
-            </div>
+          <div class="col-1"> <!--16.66%-->
+            <picture><a href="index.html">
+              <source srcset="./img/logo/Logo@1x.png" media="(max-width:767px)">
+              <img src="./img/logo/Logo@2x.png" alt="Tirtzah Schachter">
+            </a>
+            </picture>
+          </div>
+              <div class="col-9">
             <nav>
             <ul>
                 <li><a href="index.html">Work</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="nubaby.html">NuBaby</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
       </header>
-      <main>
+      <main id="myu information">
         <div>
             <div>
                 <h1>
@@ -33,7 +43,7 @@
         <div>
             <div>
                 <picture>
-                    <source srcset="./img/abt-img/portfolio-pic@1" media="(max-width:767px)">
+                    <source srcset="./img/abt-img/portfolio-pic@1.png" media="(max-width:767px)">
                     <img src="./img/abt-img/portfolio-pic@2.png" alt="My Image">
                   </picture>
                 <div>
@@ -53,7 +63,7 @@
                         <p>
                             I’m excited about the opportunity to bring my organizational skills and passion for UX design together to make a meaningful impact.
                         </p>
-                        <a href="./files/Tirtzah%20Schachter%20CV.pdf">My Resume</a>
+                        <a href="./files/Tirtzah%20Schachter%20CV.pdf" class="button">My Resume</a>
                         </a>
                     </div>
                     <div>
@@ -89,7 +99,7 @@
             </div>
         </div>
       </main>
-      <footer>
+      <footer id="contact">
         <div>
           <h2>
             Get in Touch
@@ -98,9 +108,7 @@
             Do you like my work and want to discuss opportunities? Please get in touch. Call <a href=+9725a3316450>+972-55-731-6450.</a> Prefer sending an email?
           </p>
           <div>
-            <a href="mailto: tirtzahux[at]gmail.com">
-              Email me
-            </a>
+            <a href="mailto:tirtzahux[at]gmail.com" class="button contact">Send me an email</a>
           </div>
           <div><!--Social Media Layout and Placeholders-->
             <a href="https://www.linkedin.com/" target="_blank">
