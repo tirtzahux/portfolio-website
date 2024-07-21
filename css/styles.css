@@ -5,35 +5,6 @@ neutral color (off white): #F6F2E8;
 tertiary color (light pink): #EBD7D9;
 tertiary color 2 (light purple: #DED9E5 ;
  */
- *{
-    box-sizing: border-box;
- }
- .col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: no border;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  .grid-container {
-    display: grid;
-    justify-content: space-evenly;
-  }
 body{
     background-color: #F6F2E8;
     font-family: 'maitree', sans-serif;
@@ -82,14 +53,17 @@ a:active{
 .button {
     display: inline-block;
     background-color: #637560;
-    color: #ffffff; 
+    color: #524d4d; 
     font-weight: 400;
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid #222b22; 
     transition: 0.2s opacity;
   }
-  .button:hover,.button:active{
+  .button.visited{
+    color: #DED9E5;
+  }
+  .button:hover,.button:active,.button:focus{
     opacity:0.8;
     text-decoration: none;
   }
@@ -99,13 +73,10 @@ a:active{
     text-transform: uppercase;
     border: 2px solid #637560;
   }
-  .button.contact:hover {
+  .button.contact:hover,.button.contact:active,.button.contact:focus {
     background-color: #637560;
     color: #ffffff;
   }
   img{
-    width: 100%;
-  }
-  picture{
     width: 100%
   }
