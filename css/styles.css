@@ -5,6 +5,9 @@ neutral color (off white): #F6F2E8;
 tertiary color (light pink): #EBD7D9;
 tertiary color 2 (light purple: #DED9E5 ;
  */
+ *{
+  box-sizing: border-box;
+ }
 body{
     background-color: #F6F2E8;
     font-family: 'maitree', sans-serif;
@@ -26,7 +29,7 @@ h2{
 }
 h3{
     font-size:1.25em;
-    font-weight:400;
+    font-weight:400px
 }
 h4{
     font-size: .95em;
@@ -40,14 +43,14 @@ a{
     text-decoration: none;
     font-weight:600;
 }
-a:visited{
+nav > ul > li > a:visited{
 color: #DED9E5;
 }
-a:hover,a:focus{
+nav > ul > li > a:hover,nav > ul > li > a:focus{
     color:#A5B6A2;
     text-decoration: underline;
 }
-a:active{
+nav > ul > li > a:active{
     color:#994c30
 }
 .button {
@@ -80,3 +83,80 @@ a:active{
   img{
     width: 100%
   }
+  header{
+    background-color:#A5B6A2;
+    padding: 10px 0;
+    border-bottom: 3px solid #4a4a4a;
+    text-align: center;
+    position: relative;
+    width:100%;
+    .css-box-shadow{
+      /*start ------------*/
+      width: [object Object]px; 
+      height: [object Object]px; 
+      background: #F8F8F8; 
+      border: solid #BDBDBD 0; 
+      box-shadow: 1px 11px 35px rgba(47, 99, 61, 0.4)  ; 
+      -webkit-box-shadow: 1px 11px 35px rgba(47, 99, 61, 0.4)  ; 
+      -moz-box-shadow: 1px 11px 35px rgba(47, 99, 61, 0.4)  ; 
+    }
+  }
+  
+  svg{
+    padding: 10px 5px;
+    width: 10%;
+    height: 10%;
+  }
+  /*layout styling*/
+  .container{
+    padding: 0 15px;
+  }
+  .row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  }
+  #hero h1, p{
+    text-align: center;
+  }
+  .logo{
+    max-width: 250px;
+  }
+  nav > ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  nav > ul > li > a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+  }
+  nav{
+    display: inline-block;
+    width: 100%;
+  }
+  #hero{
+    background-color: #A5B6A2;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  #projects h2 {
+    text-align: center;
+  }
+  p{
+    text-align: left;
+  }
+  footer{
+    text-align: center;
+  }
+  .container h2{
+    text-align: center;
+  }
+  #about.button {
+    text-align: center;
+  }
+  
