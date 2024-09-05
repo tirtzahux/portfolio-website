@@ -1,0 +1,1 @@
+console.log ("Hi, I'm Tirtzah. Welcome to my portfolio website!");
