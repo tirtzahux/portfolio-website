@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <script src="https://kit.fontawesome.com/4115069b08.js" crossorigin="anonymous"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,25 +19,37 @@
     <body id="index">
       <header id="top">
         <div class="container">
-          <a class="logo" href="index.html"><img src="img/logo/Logo.svg" alt="Tirtzah Schachter"></a>
+          <div class="navtoggle" id="myNavtoggle">
+            <img class="logo" src="img/logo/Logo.svg" alt="Tirtzah Schachter"></a>
             <nav>
               <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" >About</a></li>
                 <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
               </ul>
             </nav>
+          </div>  
         </div>
       </header>
       <main>
         <div id="hero">
          <div class="container">
-            <h1> Hi, I'm <div>Tirtzah.</h1>
-              <h2>I’m a UX designer based in Jerusalem, Israel.</h2>
-              <h2>I create intuitive and impactful experiences<div>
-                that genuinely meet user’s needs.</h2>
-              <h3>Check out my work</h3> 
+            <div class="hero-wrapper">
+              <div class="hero-media-wrapper">
+                <img src="img/hero/shapes.svg" alt=""> 
+              </div>
+              <div class="hero-content-wrapper">
+                <h1> Hi, I'm <span>Tirtzah.</span>
+                  <span>UX designer based in Jerusalem, Israel.</span></h1>
+                  <p>I create intuitive and impactful experiences
+                    that genuinely meet user’s needs.</p>
+                  <p><a class="hero-link" href="#projects">Check out my work</a></p> 
+              </div>
+            </div>
+          </div>
+          <div class="triangle">
           </div>
         </div><!--closes hero-->
         <div id="projects">
@@ -702,11 +715,11 @@
       </main>
       <footer id="contact">
         <div class="container">
-          <h2>
+          <h2 class=>
             Get in Touch
           </h2>
           <p>
-            Do you like my work and want to discuss opportunities? Please get in touch. Call <a href=tel:+97257316450>+972-55-731-6450.</a>Prefer sending an email?
+            Do you like my work and want to discuss opportunities? Please get in touch. Call <a href=tel:+97257316450 class="link-contact">+972-55-731-6450. </a> Prefer sending an email?
           </p>
           <div>
             <a href="mailto:tirtzahux[at]gmail.com" class="button contact">Send me an email</a>
@@ -755,6 +768,8 @@
           <a href="#top" class="button float-button">Back to top</a>
         </div>
       </footer>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       <script src="js/scripts.js"></script>
     </body>
   </html>
