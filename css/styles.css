@@ -203,10 +203,9 @@ nav a:active{
 #hero p:last-child{
   font-weight:700;
 }
-header .container{
+header .navtoggle{
   display: flex;
   flex-direction:column;
-  align-items: center;
   gap:0.5em;
 }
 .logo{
@@ -219,7 +218,7 @@ nav > ul {
   margin: 0;
 }
 nav > ul > li > a {
-  padding: 0 20px;
+  padding: 0 12px;
   text-transform: uppercase;
   font-weight: 700;
   color: #4a4a4a; 
@@ -227,6 +226,9 @@ nav > ul > li > a {
 .navtoggle li:not(:last-child) {
   display: none;
 }
+.navtoggle li:not(:last-child) {
+  display: flex;
+  }
 nav{
 
 }
@@ -363,7 +365,7 @@ Medium devices (640px and larger)
     text-align: unset;
     padding: 15px 0;
   }
-  header .container{
+  header .navtoggle{
   flex-direction: row;
   justify-content: space-between;
   }
