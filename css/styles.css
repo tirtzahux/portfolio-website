@@ -35,8 +35,12 @@ h4{
   font-size: .95em;
   font-weight: 400;
 }
+p{
+  font-size: 125%;
+  font-weight: 300;
+}
 a, a:visited{
-  color: #637560;
+  color: #000000;
   text-decoration: underline;
   font-weight:200;
 }
@@ -45,13 +49,19 @@ a:focus,
 a:active{
   color:#DED9E5
 }
+a.hero-link{
+ color: hsl(0, 0%, 0%);
+ text-decoration: none;
+ font-weight: 700;
+}
+a.hero-link:hover, a.hero-link:focus,a.hero-link:active{
+  opacity: 70%;
+}
 nav ul {
   list-style-type: none;
   padding: 0;
 }
-nav li {
-  display: inline-block;
-}
+
 nav a {
   padding: 0 15px;
   text-transform: uppercase;
@@ -69,41 +79,68 @@ nav a:focus{
 nav a:active{
   color:#994c30;
 }
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+.navtoggle.responsive nav{
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(225,127,80,0.5);
+}
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
 .button {
     display: inline-block;
-    background-color: hsl(0, 0%, 97%);
+    background-color: transparent;
     color: hsl(0, 0%, 0%); 
-    font-weight: 300;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 1px solid #222b22; 
+    border: 2px solid hsl(0, 0%, 0%);
+    font-weight: 500;
+    padding:  10px 35px;
+    border-radius: 18px;
     transition: all 0.3s ease-in-out;
     text-decoration:none;
+    text-transform: uppercase;
   }
   .button:visited{
     color: hsl(0, 0%, 0%);
   }
   .button:hover,.button:focus,.button:active{
-    opacity:0.8;
+    background-color: hsla(0, 0%, 100%, 0.401);
     text-decoration: none;
   }
-  .button.contact {
+  a.button.contact {
     background-color: transparent;
-    color: hsl(332, 29%, 51%);
+    color: hsl(0, 0%, 0%);
     text-transform: uppercase;
-    border: 2px solid hsl(332, 29%, 51%);
+    border: 2px solid hsl(0, 0%, 0%);
+    font-weight: 500;
+    border-radius: 18px;
+    padding: 10px 35px;
   }
-  .button.contact:hover,.button.contact:focus,.button.contact:active {
-    background-color: hsl(332, 29%, 51%);
+  a.button.contact:hover,a.button.contact:focus,a.button.contact:active {
+    background-color: hsla(0, 0%, 100%, 0.401);
     color: #ffffff;
   }
   img{
     width: 100%
   }
   header{
-    background-color:	hsl(0, 37%, 96%);
     padding: 10px 0;
-    text-align: center;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
     /*position:fixed;
     width:100%;
      box-shadow: 1px 11px 35px rgba(106, 122, 110, 0.4) ; 
@@ -128,25 +165,43 @@ nav a:active{
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
-
+.hero-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+}
+.hero-media-wrapper img{
+  transform: scale(1.4);
+  position: relative;
+  margin-top: 21%;
+  right: 10%;
+}
 #hero h1 {
   font-family: "Paytone One", Arial, Helvetica, sans-serif;
-  position: relative;
-  display: block;
-  line-height:58px;
-  font-size:4em;
+  line-height:85px;
+  font-size:6em;
+  margin: 0;
   /* text-align: center; */
 }
-#hero h2 {
-  display: block;
-  font-weight:400;
-  font-size: 150%;
-  line-height: 2;
-} 
-#hero h3 {
-  display: block;
+#hero span{
+  display:block;
+}
+#hero h1 span:last-child{
+  font-family: "Heebo", "sans-serif";
+  font-size: 21px; /*sets the font size to 16px*/
+  font-weight: 500; /* sets the font weight to 300*/
+  line-height: 1.6; /*sets the line height to 1.6*/
+  margin-top: 2em;
+}
+#hero p{
+  margin: 0;
+  font-family: "Heebo", "sans-serif";
+  font-size: 21px; /*sets the font size to 16px*/
   font-weight: 500;
-  margin: 5% 0;
+}
+#hero p:last-child{
+  font-weight:700;
 }
 header .container{
   display: flex;
@@ -163,14 +218,14 @@ nav > ul {
   padding: 0;
   margin: 0;
 }
-nav > ul > li {
-  display: inline-block;
-}
 nav > ul > li > a {
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
   color: #4a4a4a; 
+}
+.navtoggle li:not(:last-child) {
+  display: none;
 }
 nav{
 
@@ -180,19 +235,43 @@ nav{
   padding: 40px 0px 80px;
   display: inline-block;
   width: 100%;
+  position: relative;
+}
+.triangle{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 41vw solid hsl(44, 63%, 61%);
+  border-top: 30vh solid transparent;
+  width: 0;
+  height: 0;
 }
 #projects{
   padding: 25px 0;
+  background-color: hsl(44, 63%, 61%);
 }
+
 footer{
   text-align: center;
+  /*background-color:hsl(208, 84%, 41%);*/
+  color: hsl(0, 0%, 0%);
+  border-top: 3px solid hsl(0, 0%, 0%);
 }
 footer .container{
   position: relative;
+  padding-top:25px;
 }
-#projects h2{
+footer h2{
+  margin-top: 0;
+  color:#000000
+}
+a.link-contact{
+  color: hsl(0, 0%, 0%);
+}
+h2{
   font-family: "Paytone One";
-  font-size: 200%;
+  font-size: 250%;
 }
 div.button-wrapper{
   text-align: center;
@@ -209,10 +288,20 @@ padding-top: 103.06px;
   clear: both;
   display: table;
 }
-.float-button{
+a.button.float-button{
   position: absolute;
-  bottom: 0;
+  bottom:0;
   right: 1em;
+  text-transform: uppercase;
+}
+main.about-main{
+  padding: 80px 0 0;
+}
+div #abt-me{
+  margin-left:5%;
+}
+div #abt-me h2{
+  margin-top: 0;
 }
 svg .animation{
   width: 100%;
@@ -240,6 +329,32 @@ svg .animation{
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+/*===============================
+Small devices (639px and smaller)
+=================================*/
+@media only screen and (max-width:639px){
+.hero-media-wrapper{
+  display: none;
+}
+.triangle{
+  display: none;
+}
+header{
+  position: sticky;
+}
+h1{
+  position: relative;
+  top: 5%;
+}
+div #abt-img{
+  display: none;
+}
+main.about-main{
+  padding: 0;
+}
+
+
+}
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -252,8 +367,20 @@ Medium devices (640px and larger)
   flex-direction: row;
   justify-content: space-between;
   }
+  nav > ul {
+    margin: 1em 0;
+  }
   nav {
     
+  }
+  nav li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
   }
  /* main{
     padding-top: 79.46px;
@@ -263,6 +390,35 @@ Medium devices (640px and larger)
   }
   .copyright{
     text-align: left;
+  }
+  .hero-wrapper{
+    display:flex;
+    gap: 2em;
+  }
+  .hero-media-wrapper{
+    width: 50%;
+  }
+  .hero-content-wrapper{
+    width: 50%;
+  }
+  h1{
+    font-size: 50%;
+    position: relative;
+    top: 10%;
+  }
+  #hero p{
+    position:relative;
+    top: 10%;
+  }
+  div #abt-img{
+    width: 45%;
+  }
+  div #abt-me{
+    width: 50%;
+    display:inline;
+  }
+  img.logo{
+    max-width: 75px;
   }
 }
 
@@ -281,6 +437,17 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
   }
+  #hero h1{
+    font-size: 850%;
+    top: 0%;
+    line-height: 120px;
+  }
+  #hero h1 span:last-child {
+    font-size: 25px;
+}
+#hero p{
+  font-size: 25px;
+  top: 0%;
 }
 /* ==============================
 X-large devices (1440px or larger)
