@@ -163,7 +163,14 @@ nav a:active{
   padding: 0 15px;
 }
 .row {
+  display: flex;
+  flex-direction: row;
+
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+div.row.project-card{
+  display: flex;
+  gap: 4em;
 }
 .hero-content-wrapper{
   display: flex;
@@ -179,8 +186,8 @@ nav a:active{
 }
 #hero h1 {
   font-family: "Paytone One", Arial, Helvetica, sans-serif;
-  line-height:85px;
-  font-size:6em;
+  line-height:80px;
+  font-size:5em;
   margin: 0;
   /* text-align: center; */
 }
@@ -226,7 +233,7 @@ nav > ul > li > a {
 .navtoggle li:not(:last-child) {
   display: none;
 }
-.navtoggle li:not(:last-child) {
+.navtoggle.responsive li:not(:last-child) {
   display: flex;
   }
 nav{
@@ -253,15 +260,35 @@ nav{
   padding: 25px 0;
   background-color: hsl(44, 63%, 61%);
 }
-
+h3.project-title{
+  margin: 0;
+}
+#projects p{
+  margin: 0;
+  font-size: 115%;
+}
+picture.project-img{
+ line-height: 0;
+ display: block; 
+}
+div.col-md-6.col-lg-5.col-xl-4{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  justify-content: center;
+}
+svg#about-picture.animation{
+  width: 100%;
+}
 footer{
   text-align: center;
   /*background-color:hsl(208, 84%, 41%);*/
   color: hsl(0, 0%, 0%);
   border-top: 3px solid hsl(0, 0%, 0%);
+  position: relative;
+  padding-block-end: 4rem;
 }
 footer .container{
-  position: relative;
   padding-top:25px;
 }
 footer h2{
@@ -270,40 +297,61 @@ footer h2{
 }
 a.link-contact{
   color: hsl(0, 0%, 0%);
+  white-space: nowrap;
+}
+h2.work{
+  text-align: center;
 }
 h2{
   font-family: "Paytone One";
   font-size: 250%;
 }
-div.button-wrapper{
+h2.my-story{
   text-align: center;
 }
+.button-wrapper.cv{
+  text-align: center;
+}
+/*div.button-wrapper{
+  text-align: center;
+}*/
 /*main{
 padding-top: 103.06px;
 }*/
 [class*="col-"] {
-  float: left;
-  padding: 10px;
+  /*float: left;
+  padding: 10px;*/
 }
-.row::after {
+/*.row::after {
   content: "";
   clear: both;
   display: table;
-}
+}*/
 a.button.float-button{
   position: absolute;
-  bottom:0;
+  bottom: 1em;
   right: 1em;
   text-transform: uppercase;
 }
 main.about-main{
   padding: 80px 0 0;
 }
-div #abt-me{
-  margin-left:5%;
+h2.skills{
+  text-align: center;
 }
-div #abt-me h2{
-  margin-top: 0;
+h1.abt-me{
+  text-align: center;
+  font-family: "Paytone One";
+  font-size: 250%;
+}
+img.abt-img{
+  width:100% ; 
+  aspect-ratio: 25/9;
+  object-fit: cover;
+  object-position:0 26%; 
+}
+html{
+  scroll-behavior: smooth;
 }
 svg .animation{
   width: 100%;
@@ -348,8 +396,10 @@ h1{
   position: relative;
   top: 5%;
 }
-div #abt-img{
-  display: none;
+div #abt-img img{
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 0 37%;
 }
 main.about-main{
   padding: 0;
@@ -390,9 +440,6 @@ Medium devices (640px and larger)
   .col-md-6 {
     width: 50%;
   }
-  .copyright{
-    text-align: left;
-  }
   .hero-wrapper{
     display:flex;
     gap: 2em;
@@ -429,10 +476,10 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px){
   .col-lg-7 {
-    width:58.33%;
+    width:50%;
   }
   .col-lg-5 {
-    width: 41.66%;
+    width: 50%;
   }
   .container {
     max-width: 1200px;
@@ -440,9 +487,7 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
   #hero h1{
-    font-size: 850%;
     top: 0%;
-    line-height: 120px;
   }
   #hero h1 span:last-child {
     font-size: 25px;
