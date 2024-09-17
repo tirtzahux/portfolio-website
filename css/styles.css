@@ -28,7 +28,7 @@ h2{
   font-weight:400;
 }
 h3{
-  font-size:1.25em;
+  font-size:2em;
   font-weight:400px
 }
 h4{
@@ -103,22 +103,26 @@ nav a:active{
 
 .button {
     display: inline-block;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%); 
-    border: 2px solid hsl(0, 0%, 0%);
-    font-weight: 500;
-    padding:  10px 35px;
-    border-radius: 18px;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%); 
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding: 10px 36px;
+    line-height: 40px;
+    border-radius: 70px;
     transition: all 0.3s ease-in-out;
     text-decoration:none;
     text-transform: uppercase;
   }
   .button:visited{
-    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
   }
   .button:hover,.button:focus,.button:active{
-    background-color: hsla(0, 0%, 100%, 0.401);
     text-decoration: none;
+    box-shadow: 4px 4px 15px 5px hsl(0, 1%, 72%);
   }
   a.button.contact {
     background-color: transparent;
@@ -149,13 +153,13 @@ nav a:active{
   }
   /* ICONS */
 .social {
-  margin-top: 40px;
-}
-.social a {
-  display: inline-block;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
 .social svg {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 /*layout styling*/
@@ -170,7 +174,10 @@ nav a:active{
 }
 div.row.project-card{
   display: flex;
-  gap: 4em;
+  gap: 2em;
+  height: 25em;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 8px 0 hsl(0, 37%, 96%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .hero-content-wrapper{
   display: flex;
@@ -258,8 +265,9 @@ nav{
 }
 #projects{
   padding: 25px 0;
-  background-color: hsl(44, 63%, 61%);
+  background-color: hsl(0, 37%, 96%);
 }
+
 h3.project-title{
   margin: 0;
 }
@@ -267,15 +275,32 @@ h3.project-title{
   margin: 0;
   font-size: 115%;
 }
+#projects p.eyebrow-text{
+  font-size: 16px;
+  opacity: 40%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+p.tools{
+  font-weight: 500;
+}
 picture.project-img{
  line-height: 0;
  display: block; 
+ overflow: hidden;
+ height: 100%;
+}
+img.project-img{
+  height: 100%;
+  object-fit: cover;
 }
 div.col-md-6.col-lg-5.col-xl-4{
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
   justify-content: center;
+  padding: 3em 3em 3em 1em;
+  
 }
 svg#about-picture.animation{
   width: 100%;
@@ -284,15 +309,17 @@ footer{
   text-align: center;
   /*background-color:hsl(208, 84%, 41%);*/
   color: hsl(0, 0%, 0%);
-  border-top: 3px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 37%, 96%);
   position: relative;
-  padding-block-end: 4rem;
+  padding-block-end: 0;
 }
 footer .container{
   padding-top:25px;
+  display: flex;
+  flex-direction: column;
 }
 footer h2{
-  margin-top: 0;
+  margin: 0;
   color:#000000
 }
 a.link-contact{
@@ -311,6 +338,8 @@ h2.my-story{
 }
 .button-wrapper.cv{
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /*div.button-wrapper{
   text-align: center;
@@ -476,10 +505,10 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px){
   .col-lg-7 {
-    width:50%;
+    width:60%;
   }
   .col-lg-5 {
-    width: 50%;
+    width: 40%;
   }
   .container {
     max-width: 1200px;
@@ -495,6 +524,9 @@ Large devices (1024px or larger)
 #hero p{
   font-size: 25px;
   top: 0%;
+}
+.logo{
+  margin-left: -75px;
 }
 /* ==============================
 X-large devices (1440px or larger)
