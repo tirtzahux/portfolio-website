@@ -209,25 +209,20 @@ header {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
-div.row.project-card {
+.project-card {
   display: flex;
-  flex-direction: row;
-  height: 25em;
+  flex-direction: column;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 4px 8px 0 hsl(0, 37%, 96%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-div.project-cover {
-  width: 60%;
-}
 
-div.project-desc {
+.project-desc {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  padding: 2em 1em 2em 2em;
-  width: 40%;
   justify-content: center;
+  padding: 2em;
 }
 
 
@@ -367,7 +362,7 @@ img.project-img {
   object-position: left;
 }
 
-div.col-md-6.col-lg-5.col-xl-4 {
+.col-md-6.col-lg-5.col-xl-4 {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -580,9 +575,6 @@ Medium devices (640px and larger)
   /* main{
     padding-top: 79.46px;
   } */
-  .col-md-6 {
-    width: 50%;
-  }
 
   .hero-wrapper {
     display: flex;
@@ -620,6 +612,19 @@ Medium devices (640px and larger)
   img.logo {
     max-width: 75px;
   }
+
+  .project-card {
+    flex-direction: row;
+  }
+
+  
+.project-cover {
+  width: 60%;
+}
+
+.project-desc {
+  width: 40%;
+}
 }
 
 /* ==============================
