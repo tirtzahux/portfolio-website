@@ -209,20 +209,25 @@ header {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
-.project-card {
+div.row.project-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 25em;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 4px 8px 0 hsl(0, 37%, 96%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+div.project-cover {
+  width: 60%;
+}
 
-.project-desc {
+div.project-desc {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  padding: 2em 1em 2em 2em;
+  width: 40%;
   justify-content: center;
-  padding: 2em;
 }
 
 
@@ -307,13 +312,13 @@ nav > ul > li > a {
 
 #hero {
   background-color: hsl(0, 37%, 96%);
-  padding: 40px 0 80px;
+  padding: 40px 0;
   display: inline-block;
   width: 100%;
   position: relative;
 }
 
-.triangle {
+/*.triangle {
   content: "";
   position: absolute;
   bottom: 0;
@@ -322,7 +327,7 @@ nav > ul > li > a {
   border-top: 30vh solid transparent;
   width: 0;
   height: 0;
-}
+}*/
 
 #projects {
   padding: 25px 0;
@@ -362,7 +367,7 @@ img.project-img {
   object-position: left;
 }
 
-.col-md-6.col-lg-5.col-xl-4 {
+div.col-md-6.col-lg-5.col-xl-4 {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -453,7 +458,7 @@ h1.abt-me {
 
 img.abt-img {
   width: 100%;
-  aspect-ratio: 25/9;
+  aspect-ratio: 15/9;
   object-fit: cover;
   object-position: 0 26%;
 }
@@ -518,9 +523,9 @@ Small devices (639px and smaller)
     display: none;
   }
 
-  .triangle {
+  /*.triangle {
     display: none;
-  }
+  }*/
 
   header {
     position: sticky;
@@ -575,6 +580,9 @@ Medium devices (640px and larger)
   /* main{
     padding-top: 79.46px;
   } */
+  .col-md-6 {
+    width: 50%;
+  }
 
   .hero-wrapper {
     display: flex;
@@ -612,19 +620,6 @@ Medium devices (640px and larger)
   img.logo {
     max-width: 75px;
   }
-
-  .project-card {
-    flex-direction: row;
-  }
-
-  
-.project-cover {
-  width: 60%;
-}
-
-.project-desc {
-  width: 40%;
-}
 }
 
 /* ==============================
