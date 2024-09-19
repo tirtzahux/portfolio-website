@@ -211,24 +211,19 @@ header {
   flex-direction:column;
 }
 
-div.row.project-card {
+.row.project-card {
   display: flex;
-  flex-direction: row;
-  height: 25em;
+  flex-direction: column;
+  /*height: 25em;*/
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 4px 8px 0 hsl(0, 37%, 96%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-div.project-cover {
-  width: 60%;
-}
-
-div.project-desc {
+.project-desc {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
   padding: 2em 1em 2em 2em;
-  width: 40%;
   justify-content: center;
 }
 
@@ -369,7 +364,7 @@ img.project-img {
   object-position: left;
 }
 
-div.col-md-6.col-lg-5.col-xl-4 {
+.col-md-6.col-lg-5.col-xl-4 {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -430,7 +425,7 @@ h2.my-story {
   text-align: center;
 }
 
-/* div.button-wrapper{
+/*.button-wrapper{
   text-align: center;
 } */
 
@@ -629,8 +624,19 @@ Medium devices (640px and larger)
     max-width: 75px;
   }
 
-  .row{
+  .row.project-card {
     flex-direction: row;
+  }
+  .row {
+    flex-direction: row;
+  }
+
+  .project-cover {
+    width: 60%;
+  }
+
+  .project-desc {
+  width: 40%;
   }
 }
 
