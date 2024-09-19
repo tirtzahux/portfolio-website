@@ -207,6 +207,8 @@ header {
 
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  display: flex;
+  flex-direction:column;
 }
 
 div.row.project-card {
@@ -373,6 +375,12 @@ div.col-md-6.col-lg-5.col-xl-4 {
   gap: 1em;
   justify-content: center;
   padding: 3em 3em 3em 1em;
+}
+
+.col-md-6.col-lg-8.col-xl-4 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
 }
 
 svg#about-picture.animation {
@@ -619,6 +627,10 @@ Medium devices (640px and larger)
 
   img.logo {
     max-width: 75px;
+  }
+
+  .row{
+    flex-direction: row;
   }
 }
 
