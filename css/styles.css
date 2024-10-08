@@ -9,10 +9,10 @@ tertiary color 2 (light purple: #DED9E5 ; */
 }
 
 body {
-  background-color: hsl(0, 37%, 96%);
+  background-color: hsl(0, 0, 100%);
   font-family: "Heebo", "sans-serif";
   font-size: 16px; /* sets the font size to 16px */
-  font-weight: 300; /* sets the font weight to 300 */
+  font-weight: 200; /* sets the font weight to 300 */
   line-height: 1.6; /* sets the line height to 1.6 */
   color: #000;
 }
@@ -45,15 +45,35 @@ h4 {
 }
 
 p {
-  font-size: 125%;
+  font-size: 18px;
   font-weight: 300;
 }
+
+/*.petemoss-regular {
+  font-family: "Petemoss", cursive;
+  font-weight: 400;
+  font-style: normal;
+}*/
 
 a,
 a:visited {
   color: #000;
   text-decoration: underline;
   font-weight: 200;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: hsl(209, 60%, 93%);
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 20px;
+  line-height: 40px;
+  border-radius: 70px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 a:hover,
@@ -65,7 +85,21 @@ a:active {
 a.hero-link {
   color: hsl(0, 0%, 0%);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+mark {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(207, 227, 245, 100%),
+    rgba(231, 239, 245, 100%)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 a.hero-link:hover,
@@ -76,7 +110,7 @@ a.hero-link:active {
 
 nav ul {
   list-style-type: none;
-  padding: 0;
+  padding: 20px;
 }
 
 nav a {
@@ -227,8 +261,6 @@ header {
   justify-content: center;
 }
 
-
-
 .hero-content-wrapper {
   display: flex;
   flex-direction: column;
@@ -237,16 +269,44 @@ header {
 }
 
 .hero-media-wrapper img {
-  transform: scale(1.4);
+  /*transform: scale(1.4);
   position: relative;
   margin-top: 21%;
-  right: 10%;
+  right: 10%;*/
+}
+
+/*.short-flower {
+  max-width: 43%;
+  margin: 44% 0 0 8%;
+}
+
+.tall-flower {
+  max-width: 59%;
+  position: absolute;
+  margin: -15% 0 0 36%;
+}*/
+
+.path {
+  stroke-dasharray: 20;
+}
+
+.path {
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 #hero h1 {
-  font-family: "Paytone One", Arial, Helvetica, sans-serif;
-  line-height: 80px;
-  font-size: 5em;
+  font-family: "Lustria", 'Arial', 'Helvetica', 'sans-serif';
+  line-height: 60px;
+  font-size: 350%;
+  font-weight: 100;
   margin: 0;
 
   /* text-align: center; */
@@ -258,8 +318,8 @@ header {
 
 #hero h1 span:last-child {
   font-family: "Heebo", "sans-serif";
-  font-size: 21px; /* sets the font size to 16px */
-  font-weight: 500; /* sets the font weight to 300 */
+  font-size: 18px; /* sets the font size to 16px */
+  font-weight: 200; /* sets the font weight to 300 */
   line-height: 1.6; /* sets the line height to 1.6 */
   margin-top: 2em;
 }
@@ -267,12 +327,8 @@ header {
 #hero p {
   margin: 0;
   font-family: "Heebo", "sans-serif";
-  font-size: 21px; /* sets the font size to 16px */
-  font-weight: 500;
-}
-
-#hero p:last-child {
-  font-weight: 700;
+  font-size: 18px; /* sets the font size to 16px */
+  font-weight: 200;
 }
 
 header .navtoggle {
@@ -282,7 +338,7 @@ header .navtoggle {
 }
 
 .logo {
-  max-width: 75px;
+  max-width: 125px;
   line-height: 0;
 }
 
@@ -308,11 +364,12 @@ nav > ul > li > a {
 }
 
 #hero {
-  background-color: hsl(0, 37%, 96%);
-  padding: 40px 0;
+  padding: 10em 0 7em;
   display: inline-block;
   width: 100%;
   position: relative;
+  border-bottom: 2px solid hsla(0, 4%, 75%, .35);
+  box-shadow: 0 4px 8px hsla(0, 0%, 78%, .15);
 }
 
 /*.triangle {
@@ -328,7 +385,16 @@ nav > ul > li > a {
 
 #projects {
   padding: 25px 0;
-  background-color: hsl(0, 37%, 96%);
+  background-color: hsl(0, 0, 100%);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h3.project-title {
@@ -390,7 +456,7 @@ footer {
 
   /* background-color:hsl(208, 84%, 41%) */
   color: hsl(0, 0%, 0%);
-  background-color: hsl(0, 37%, 96%);
+  background-color: hsl(0, 0, 100%);
   position: relative;
   padding-block-end: 0;
 }
@@ -416,8 +482,9 @@ h2.work {
 }
 
 h2 {
-  font-family: "Paytone One";
-  font-size: 250%;
+  font-family: "Lustria";
+  font-weight: 300;
+  font-size: 200%;
 }
 
 h2.my-story {
@@ -454,8 +521,9 @@ h2.skills {
 
 h1.abt-me {
   text-align: center;
-  font-family: "Paytone One";
+  font-family: "Lustria";
   font-size: 250%;
+  font-weight: 100;
 }
 
 img.abt-img {
@@ -547,6 +615,10 @@ Small devices (639px and smaller)
   main.about-main {
     padding: 0;
   }
+
+  #hero {
+    padding: 7em 0;
+  }
 }
 
 /* ==============================
@@ -565,6 +637,10 @@ Medium devices (640px and larger)
 
   nav > ul {
     margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
   nav li {
@@ -585,18 +661,22 @@ Medium devices (640px and larger)
   .col-md-6 {
     width: 50%;
   }
-
+  
   .hero-wrapper {
     display: flex;
-    gap: 2em;
+    flex-direction: row;
   }
 
   .hero-media-wrapper {
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    position:relative;
   }
 
   .hero-content-wrapper {
-    width: 50%;
+    width: 63;
+    margin-left: 6em;
   }
 
   h1 {
@@ -620,7 +700,7 @@ Medium devices (640px and larger)
   }
 
   img.logo {
-    max-width: 75px;
+    max-width: 125px;
   }
 
   .row.project-card {
@@ -668,8 +748,27 @@ Large devices (1024px or larger)
   #hero p {
     font-size: 25px;
     top: 0%;
+    font-weight: 200;
   }
 
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2em;
+  }
+
+  .row.project-card {
+    flex-direction: column;
+  }
+
+  .project-cover{
+    width:100%;
+    height: 50%;
+  }
+
+  .project-desc {
+    width: 100%;
+  }
 }
 
 /* ==============================
