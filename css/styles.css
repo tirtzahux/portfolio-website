@@ -538,10 +538,12 @@ h1.abt-me {
 }
 
 img.abt-img {
-  width: 100%;
-  aspect-ratio: 15/9;
+  width: 50%;
+  aspect-ratio: 16/12;
   object-fit: cover;
   object-position: 0 26%;
+  float: left;
+  padding: 0 1em 0 0;
 }
 
 html {
@@ -701,15 +703,6 @@ Medium devices (640px and larger)
     top: 10%;
   }
 
-  div #abt-img {
-    width: 45%;
-  }
-
-  div #abt-me {
-    width: 50%;
-    display: inline;
-  }
-
   img.logo {
     max-width: 150px;
   }
@@ -719,6 +712,7 @@ Medium devices (640px and larger)
   }
   .row {
     flex-direction: row;
+    gap: 2em;
   }
 
   .project-cover {
